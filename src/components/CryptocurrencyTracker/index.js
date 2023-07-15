@@ -5,7 +5,6 @@ import Loader from 'react-loader-spinner'
 import CryptocurrenciesList from '../CryptocurrenciesList'
 
 import './index.css'
-import {async} from 'fast-glob'
 
 const apiUrl = 'https://apis.ccbp.in/crypto-currency-converter'
 
@@ -33,24 +32,25 @@ class CryptocurrencyTracker extends Component {
       })),
       isLoading: false,
     })
+  }
 
-    renderCryptocurrenciesList = () => {
-      const {cryptocurrenciesData} = this.state
+  renderCryptocurrenciesList = () => {
+    const {cryptocurrenciesData} = this.state
 
-      return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
-    }
+    return <CryptocurrenciesList cryptocurrenciesData={cryptocurrenciesData} />
+  }
 
-    renderLoader = () => (
-      <div>
-        <Loader type="Rings" color="#ffffff" height={80} width={80} />
-      </div>
-    )
-  
-  render(){
+  renderLoader = () => (
+    <div data-testid="loader">
+      <Loader type="Rings" color="#ffffff" height={80} width={80} />
+    </div>
+  )
+
+  render() {
     const {isLoading} = this.state
 
     return (
-      <div className="app-container" data-testid="loader">
+      <div className="app-container">
         {isLoading ? this.renderLoader() : this.renderCryptocurrenciesList()}
       </div>
     )
