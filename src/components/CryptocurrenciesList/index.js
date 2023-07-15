@@ -1,6 +1,8 @@
 // Write your JS code here
 import {Component} from 'react'
-import CrytocurrenctItem from '../CryptocurrencyItem'
+
+import CryptocurrencyItem from '../CryptocurrencyItem'
+
 import './index.css'
 
 class CryptocurrenciesList extends Component {
@@ -35,9 +37,9 @@ class CryptocurrenciesList extends Component {
   render() {
     return (
       <div className="cryptocurrencies-container">
-        <h1 className="cryptocurrencies-heading">Cryptocurrency Tracker</h1>
+        <h1 className="heading">Cryptocurrency Tracker</h1>
         <img
-          className="cryptocurrencies-img"
+          className="cryptocurrency-img"
           alt="cryptocurrency"
           src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png"
         />
