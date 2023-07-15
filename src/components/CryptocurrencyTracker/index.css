@@ -1,1 +1,21 @@
 /* Write your CSS here */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  font-family: 'Roboto';
+  min-height: 100vh;
+}
+.error-messgae {
+  text-align: center;
+  color: aqua;
+  font-size: 28px;
+  margin: 4px;
+  font-weight: bold;
+}
+@media (min-width: 576px) {
+  .error-messgae {
+    font-size: 48px;
+  }
+}
